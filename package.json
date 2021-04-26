@@ -1,0 +1,25 @@
+{
+  "name": "webgc",
+  "version": "1.0.0",
+  "description": "Web-based MAVLink tool",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "make": "webpack --config webpack.config.js",
+    "start": "npm run watch & webpack serve"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "buffer": "^6.0.3",
+    "esrecurse": "^4.3.0",
+    "events": "^3.3.0",
+    "jspack": "0.0.4",
+    "lodash": "^4.17.21",
+    "mavlink": "^1.0.1",
+    "terser": "^5.6.1",
+    "underscore": "^1.13.1",
+    "util": "^0.12.3"
+  }
+}
