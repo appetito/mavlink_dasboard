@@ -11,6 +11,8 @@ jspack = require("jspack").jspack,
     events = require("events"),
     util = require("util");
 
+const Buffer = require("buffer").Buffer;
+
 // Add a convenience method to Buffer
 Buffer.prototype.toByteArray = function () {
   return Array.prototype.slice.call(this, 0)

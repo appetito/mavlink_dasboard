@@ -13,13 +13,23 @@
   "license": "ISC",
   "dependencies": {
     "buffer": "^6.0.3",
+    "bulma": "^0.9.2",
+    "canvasjs": "^1.8.3",
+    "chartjs": "^0.3.24",
+    "css-loader": "^5.2.4",
     "esrecurse": "^4.3.0",
     "events": "^3.3.0",
     "jspack": "0.0.4",
     "lodash": "^4.17.21",
     "mavlink": "^1.0.1",
+    "process": "^0.11.10",
+    "rickshaw": "^1.7.1",
+    "style-loader": "^2.0.0",
     "terser": "^5.6.1",
     "underscore": "^1.13.1",
-    "util": "^0.12.3"
+    "util": "^0.12.3",
+    "webpack": "^5.35.1",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
   }
 }

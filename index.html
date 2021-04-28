@@ -3,16 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Getting Started</title>
-    <!-- <script src="https://unpkg.com/lodash@4.17.20"></script> -->
-        <script src="https://tech.shutterstock.com/rickshaw/vendor/d3.v3.js"></script>
-    <script src="https://tech.shutterstock.com/rickshaw/rickshaw.js"></script>
 
-    <link type="text/css" rel="stylesheet" href="/src/css/graph.css">
-    <link type="text/css" rel="stylesheet" href="/src/css/detail.css">
-    <link type="text/css" rel="stylesheet" href="/src/css/legend.css">
-    <link type="text/css" rel="stylesheet" href="/src/css/extensions.css">
-    <link type="text/css" rel="stylesheet" href="/src/css/lines.css">
-    <!-- <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/shutterstock/rickshaw/master/rickshaw.min.css"> -->
     <style type="text/css">
       .row{
         display: block;
@@ -24,29 +15,54 @@
         border: 1px solid grey;
       }
     </style>
+    <script type="text/javascript" src="./src/canvasjs.min.js"></script>
   </head>
   <body>
-    <!-- <script src="./src/index.js"></script> -->
-    <div class="row" id="contols">
-      <button id="connect">Connect</button>
-      <button id="request_data">Request IMU data</button>
-    </div>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        MAVLink Live Dashboard v0.1
+      </div>
 
-    <div class="row" id="status">
-      <div class="cell" id="link_status">wait</div>
-      <div class="cell" id="system_status"></div>
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <div class="navbar-item">
+            <div class="buttons">
+              <button id="connect" class="button is-primary">Connect</button>
+            </div>
+          </div>
+
+          <div class="navbar-item">
+            <button id="request_data" class="button">Request IMU data</button>
+          </div>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-primary">
+                <strong>Kuku</strong>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="columns" id="status">
+      <div class="column" id="link_status">wait</div>
+      <div class="column" id="system_status"></div>
 <!--       <div class="cell" id="connection"></div> -->
     </div>
 
-    <div class="row" id="data">
+<!--     <div class="row" id="data">
 
       <div class="cell">
         <div id="chart"></div>
         <div id="legend"></div>
       </div>
       <div class="cell" id="mag_data"></div>
-    </div>
-
+    </div> -->
+    <div id="chartContainer" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>
     <script src="./dist/index.bundle.js"></script>
   </body>
 </html>
